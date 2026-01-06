@@ -15,7 +15,7 @@ feature quantization network (CMFQN) to detect fake news by
 
 ## Dataset
 The meta-data of the Weibo and IKCEST datasets used in our experiments are available.
-* Weibo: ["Multimodal Fusion with Recurrent Neural Networks for Rumor Detection on Microblogs"](https://github.com/facebookresearch/mae).
+* Weibo: ["MRML: Multimodal Rumor Detection by Deep Metric Learning"](https://github.com/plw-study/MRML?tab=readme-ov-file).
 * IKCEST: The data was published on [Github](https://github.com/THU-BPM/MR2).
 You can also download it directly through the link below (https://drive.google.com/file/d/14NNqLKSW1FzLGuGkqwlzyIPXnKDzEFX4/view?usp=sharing).
 
