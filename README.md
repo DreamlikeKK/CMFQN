@@ -15,8 +15,8 @@ feature quantization network (CMFQN) to detect fake news by
 
 ## Dataset
 The meta-data of the Weibo, Weibo21 and IKCEST datasets used in our experiments are available.
-* Weibo: download from the official release at ["MRML: Multimodal Rumor Detection by Deep Metric Learning"](https://github.com/plw-study/MRML?tab=readme-ov-file).
-* Weibo21: download from the official release at ["Weibo21"](https://github.com/ICTMCG/Weibo21).
+* Weibo: download from the official release at ["Weibo17"](https://github.com/plw-study/MRML?tab=readme-ov-file).
+* Weibo21: download from the official release at ["Weibo21"](https://github.com/kennqiang/MDFEND-Weibo21?utm_source=chatgpt.com).
 * IKCEST: The data was published on [Github](https://github.com/THU-BPM/MR2).
 You can also download it directly through the link below (https://drive.google.com/file/d/14NNqLKSW1FzLGuGkqwlzyIPXnKDzEFX4/view?usp=sharing).
 
