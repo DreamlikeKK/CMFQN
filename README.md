@@ -14,8 +14,9 @@ feature quantization network (CMFQN) to detect fake news by
 ![CMFQN Figure](figures/main.png)
 
 ## Dataset
-The meta-data of the Weibo and IKCEST datasets used in our experiments are available.
-* Weibo: ["MRML: Multimodal Rumor Detection by Deep Metric Learning"](https://github.com/plw-study/MRML?tab=readme-ov-file).
+The meta-data of the Weibo, Weibo21 and IKCEST datasets used in our experiments are available.
+* Weibo: download from the official release at ["MRML: Multimodal Rumor Detection by Deep Metric Learning"](https://github.com/plw-study/MRML?tab=readme-ov-file).
+* Weibo21: download from the official release at ["Weibo21"](https://github.com/ICTMCG/Weibo21).
 * IKCEST: The data was published on [Github](https://github.com/THU-BPM/MR2).
 You can also download it directly through the link below (https://drive.google.com/file/d/14NNqLKSW1FzLGuGkqwlzyIPXnKDzEFX4/view?usp=sharing).
 
@@ -46,6 +47,12 @@ For Weibo-dataset:
 bash process_weibo.sh 
 ```
 
+For Weibo21-dataset:
+
+```Shell
+bash process_weibo21.sh 
+```
+
 For IKCEST-dataset:
 
 ```Shell
@@ -60,18 +67,13 @@ bash train_weibo.sh
 ```
 and
 ```Shell
+bash train_weibo21.sh 
+```
+and
+```Shell
 bash train_ikcest.sh 
 ```
 The training results and the saved parameter files can be seen in the `ouput` folder
 
-### Visualization:
-The visualization part in the experiment was implemented through produce Grad-CAM.
-![cam Figure](figures/cam.png)
-The visual image can be obtained through:
-```Shell
-python visualization.py 
-```
-and the specific sample is set in the `visualization.py`
-
 ### License
-We have been granted permisson to use Weibo IKCEST datasets for academic studies only.
+We have been granted permisson to use Weibo, Weibo21 and IKCEST datasets for academic studies only.

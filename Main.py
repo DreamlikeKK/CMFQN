@@ -99,6 +99,16 @@ def main(args):
         setting['thresh'] = 0.5
         print(f"thresh:{setting['thresh']}")
 
+    elif setting['train_dataname']=='weibo21':
+        print("Using weibo21 as training")
+        from data.dataset_local import H5FeatureDataset
+        train_dataset = H5FeatureDataset("/home/shunlizhang/zwk/CMFQN/data/weibo21_dataset_local/features_dif.h5")
+        train_loader = DataLoader(train_dataset, batch_size=custom_batch_size, shuffle=shuffle,
+                                num_workers=num_workers, sampler=train_sampler, drop_last=True,
+                                pin_memory=True)
+        setting['thresh'] = 0.5
+        print(f"thresh:{setting['thresh']}")
+
     ########## validate dataset ####################
     if setting['val_dataname']=='weibo':
         print("Using weibo as inference")
@@ -118,6 +128,14 @@ def main(args):
     elif setting['val_dataname']=='ikcest':
         from data.dataset_local import H5FeatureDataset
         validate_dataset = H5FeatureDataset("/home/shunlizhang/zwk/CMFQN/data/ikcest_dataset_local/test_features_dif.h5")
+        validate_loader = DataLoader(validate_dataset, batch_size=custom_batch_size, shuffle=False,
+                                    num_workers=4, sampler=None, drop_last=False,
+                                    pin_memory=True)
+
+    elif setting['val_dataname']=='weibo21':
+        print("Using weibo21 as inference")
+        from data.dataset_local import H5FeatureDataset
+        validate_dataset = H5FeatureDataset("/home/shunlizhang/zwk/CMFQN/data/weibo21_dataset_local/val_features_dif.h5")
         validate_loader = DataLoader(validate_dataset, batch_size=custom_batch_size, shuffle=False,
                                     num_workers=4, sampler=None, drop_last=False,
                                     pin_memory=True)
